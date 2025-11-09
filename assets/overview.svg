@@ -1,63 +1,60 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300">
   <defs>
-    <linearGradient id="g" x1="0" x2="1">
-      <stop offset="0%" stop-color="#4facfe"/>
-      <stop offset="100%" stop-color="#00f2fe"/>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
     </linearGradient>
-    <style>
-      .title { font: 700 20px/1.2 'Segoe UI', Roboto, sans-serif; fill: #222 }
-      .lbl { font: 600 14px/1 'Segoe UI', Roboto, sans-serif; fill: #fff }
-      .desc { font: 400 12px/1 'Segoe UI', Roboto, sans-serif; fill: #333 }
-      .box { rx:10; ry:10; fill: url(#g); filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15)); }
-      .small { font-size:11px; fill:#fff }
-      .arrow { stroke: #9aa; stroke-width:2; fill:none; marker-end: url(#arrowhead)}
-    </style>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#9aa" />
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#888" />
     </marker>
   </defs>
-
-  <rect width="100%" height="100%" fill="#fbfdff" rx="10" />
-  <text x="28" y="36" class="title">Structure Showdown — Data Structures Performance</text>
-  <text x="28" y="58" class="desc">Empirical benchmarking of arrays, linked lists, BSTs, hash tables & graphs with visualization and export.</text>
-
-  <!-- Boxes -->
-  <g transform="translate(28,88)">
-    <rect x="0" y="0" width="160" height="56" class="box" />
-    <text x="14" y="32" class="lbl">Array</text>
-    <text x="14" y="46" class="small">insert/search/delete</text>
-
-    <rect x="190" y="0" width="160" height="56" class="box" />
-    <text x="204" y="32" class="lbl">Linked List</text>
-    <text x="204" y="46" class="small">append/find/delete</text>
-
-    <rect x="380" y="0" width="160" height="56" class="box" />
-    <text x="394" y="32" class="lbl">Binary Search Tree</text>
-    <text x="394" y="46" class="small">balanced vs ordered inserts</text>
-
-    <rect x="570" y="0" width="160" height="56" class="box" />
-    <text x="584" y="32" class="lbl">Hash Table</text>
-    <text x="584" y="46" class="small">put/get/delete</text>
-
-    <rect x="760" y="0" width="120" height="56" class="box" />
-    <text x="774" y="32" class="lbl">Graph</text>
-    <text x="774" y="46" class="small">BFS / edges / nodes</text>
+  
+  <!-- Background -->
+  <rect width="900" height="300" fill="#f8fbff" rx="8" />
+  
+  <!-- Title -->
+  <text x="450" y="35" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#2c3e50" text-anchor="middle">Structure Showdown — Data Structures Performance</text>
+  <text x="450" y="58" font-family="Arial, sans-serif" font-size="13" fill="#555" text-anchor="middle">Empirical benchmarking with visualization and export</text>
+  
+  <!-- Data Structure Boxes -->
+  <g id="ds-boxes">
+    <!-- Array -->
+    <rect x="40" y="85" width="140" height="60" rx="8" fill="url(#grad1)" />
+    <text x="110" y="110" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Array</text>
+    <text x="110" y="128" font-family="Arial, sans-serif" font-size="11" fill="#fff" text-anchor="middle">insert/search/delete</text>
+    
+    <!-- Linked List -->
+    <rect x="200" y="85" width="140" height="60" rx="8" fill="url(#grad1)" />
+    <text x="270" y="110" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Linked List</text>
+    <text x="270" y="128" font-family="Arial, sans-serif" font-size="11" fill="#fff" text-anchor="middle">append/find/delete</text>
+    
+    <!-- BST -->
+    <rect x="360" y="85" width="140" height="60" rx="8" fill="url(#grad1)" />
+    <text x="430" y="110" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">BST</text>
+    <text x="430" y="128" font-family="Arial, sans-serif" font-size="11" fill="#fff" text-anchor="middle">balanced/ordered</text>
+    
+    <!-- Hash Table -->
+    <rect x="520" y="85" width="140" height="60" rx="8" fill="url(#grad1)" />
+    <text x="590" y="110" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Hash Table</text>
+    <text x="590" y="128" font-family="Arial, sans-serif" font-size="11" fill="#fff" text-anchor="middle">put/get/delete</text>
+    
+    <!-- Graph -->
+    <rect x="680" y="85" width="140" height="60" rx="8" fill="url(#grad1)" />
+    <text x="750" y="110" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Graph</text>
+    <text x="750" y="128" font-family="Arial, sans-serif" font-size="11" fill="#fff" text-anchor="middle">BFS/edges/nodes</text>
   </g>
-
-  <!-- Arrows down to benchmark engine -->
-  <g transform="translate(0,170)">
-    <path d="M80 120 L440 200" class="arrow" />
-    <path d="M280 120 L600 200" class="arrow" />
-  </g>
-
-  <!-- Engine box -->
-  <g transform="translate(220,190)">
-    <rect x="0" y="0" width="460" height="80" rx="12" fill="#fff" stroke="#e6f2ff" stroke-width="2" />
-    <text x="20" y="28" class="title">Benchmark Engine</text>
-    <text x="20" y="46" class="desc">Runs trials, aggregates mean/median/std, exports CSV</text>
-    <text x="20" y="62" class="small">time.perf_counter() • configurable sizes & trials • repeatable</text>
-  </g>
-
-  <!-- Footer note -->
-  <text x="28" y="286" class="small">Generated overview — Structure Showdown</text>
+  
+  <!-- Arrows -->
+  <line x1="110" y1="145" x2="370" y2="185" stroke="#888" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="430" y1="145" x2="450" y2="185" stroke="#888" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="750" y1="145" x2="530" y2="185" stroke="#888" stroke-width="2" marker-end="url(#arrow)" />
+  
+  <!-- Benchmark Engine Box -->
+  <rect x="280" y="190" width="340" height="75" rx="10" fill="#fff" stroke="#4facfe" stroke-width="2" />
+  <text x="450" y="215" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50" text-anchor="middle">Benchmark Engine</text>
+  <text x="450" y="235" font-family="Arial, sans-serif" font-size="12" fill="#555" text-anchor="middle">Runs trials • Aggregates stats • Exports CSV</text>
+  <text x="450" y="252" font-family="Arial, sans-serif" font-size="11" fill="#777" text-anchor="middle">time.perf_counter() • configurable sizes &amp; trials</text>
+  
+  <!-- Footer -->
+  <text x="450" y="288" font-family="Arial, sans-serif" font-size="10" fill="#999" text-anchor="middle">Structure Showdown — Interactive Data Structures Analyzer</text>
 </svg>
