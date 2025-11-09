@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0%" stop-color="#4facfe"/>
+      <stop offset="100%" stop-color="#00f2fe"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 20px/1.2 'Segoe UI', Roboto, sans-serif; fill: #222 }
+      .lbl { font: 600 14px/1 'Segoe UI', Roboto, sans-serif; fill: #fff }
+      .desc { font: 400 12px/1 'Segoe UI', Roboto, sans-serif; fill: #333 }
+      .box { rx:10; ry:10; fill: url(#g); filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15)); }
+      .small { font-size:11px; fill:#fff }
+      .arrow { stroke: #9aa; stroke-width:2; fill:none; marker-end: url(#arrowhead)}
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#9aa" />
+    </marker>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#fbfdff" rx="10" />
+  <text x="28" y="36" class="title">Structure Showdown — Data Structures Performance</text>
+  <text x="28" y="58" class="desc">Empirical benchmarking of arrays, linked lists, BSTs, hash tables & graphs with visualization and export.</text>
+
+  <!-- Boxes -->
+  <g transform="translate(28,88)">
+    <rect x="0" y="0" width="160" height="56" class="box" />
+    <text x="14" y="32" class="lbl">Array</text>
+    <text x="14" y="46" class="small">insert/search/delete</text>
+
+    <rect x="190" y="0" width="160" height="56" class="box" />
+    <text x="204" y="32" class="lbl">Linked List</text>
+    <text x="204" y="46" class="small">append/find/delete</text>
+
+    <rect x="380" y="0" width="160" height="56" class="box" />
+    <text x="394" y="32" class="lbl">Binary Search Tree</text>
+    <text x="394" y="46" class="small">balanced vs ordered inserts</text>
+
+    <rect x="570" y="0" width="160" height="56" class="box" />
+    <text x="584" y="32" class="lbl">Hash Table</text>
+    <text x="584" y="46" class="small">put/get/delete</text>
+
+    <rect x="760" y="0" width="120" height="56" class="box" />
+    <text x="774" y="32" class="lbl">Graph</text>
+    <text x="774" y="46" class="small">BFS / edges / nodes</text>
+  </g>
+
+  <!-- Arrows down to benchmark engine -->
+  <g transform="translate(0,170)">
+    <path d="M80 120 L440 200" class="arrow" />
+    <path d="M280 120 L600 200" class="arrow" />
+  </g>
+
+  <!-- Engine box -->
+  <g transform="translate(220,190)">
+    <rect x="0" y="0" width="460" height="80" rx="12" fill="#fff" stroke="#e6f2ff" stroke-width="2" />
+    <text x="20" y="28" class="title">Benchmark Engine</text>
+    <text x="20" y="46" class="desc">Runs trials, aggregates mean/median/std, exports CSV</text>
+    <text x="20" y="62" class="small">time.perf_counter() • configurable sizes & trials • repeatable</text>
+  </g>
+
+  <!-- Footer note -->
+  <text x="28" y="286" class="small">Generated overview — Structure Showdown</text>
+</svg>
