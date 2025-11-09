@@ -1,7 +1,5 @@
 # 🧱 Structure Showdown: Performance Analysis and Comparison of Data Structures
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.39.0-FF4B4B.svg)](https://streamlit.io/)
 
 > Empirical performance analysis and comparison of fundamental data structures across diverse operations.
 
